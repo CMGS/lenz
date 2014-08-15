@@ -29,7 +29,7 @@ func assert(err error, context string) {
 
 func pid(path string) {
 	if err := ioutil.WriteFile(path, []byte(strconv.Itoa(os.Getpid())), 0755); err != nil {
-		log.Println("Save app config failed", err)
+		log.Println("Save pid failed", err)
 	}
 }
 
